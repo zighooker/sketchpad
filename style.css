@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.sketchBorder {
+    border: 50px solid red;
+    border-radius: 20px;
+}
+
+.sketchContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 500px;
+}
+
+.optionsPanel {
+    border: 5px solid black;
+}
+
+.header,
+.footer {
+    background-color: rgb(68, 68, 68);
+    color: white;
+    align-self: stretch;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.sketchHover:hover {
+    background-color: black;
+}
