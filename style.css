@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Cabin Sketch', sans-serif;
 }
 
 body {
@@ -9,6 +10,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 50px;
+    background-color: #cacaca;
 }
 
 .content {
@@ -20,8 +22,10 @@ body {
 }
 
 .sketchBorder {
-    border: 50px solid red;
+    border: 5px solid #000000;
     border-radius: 20px;
+    background-color: #bf0000;
+    padding: 50px;
 }
 
 .sketchContainer {
@@ -29,24 +33,99 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    height: 512px;
-    width: 512px;
+    background-color: #ffffff;
+    height: 510px;
+    width: 760px;
+    border: 5px solid #000000;
+    border-radius: 10px;
 }
 
 .optionsPanel {
-    border: 5px solid black;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    background-color: #b9b9b9;
+    font-size: 22px;
+    background-color: #444444;
+    color: white;
 }
 
 .header,
 .footer {
-    background-color: rgb(68, 68, 68);
+    background-color: #444444;
     color: white;
     align-self: stretch;
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
     padding: 10px;
 }
 
-.sketchHover:hover {
-    background-color: black;
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+  
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cccccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #ffffff;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+  
+input:checked + .slider {
+    background-color: #000000;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.sizeSlider {
+    -webkit-appearance: none;
+    background-color: #cccccc;
+    height: 24px;
+    outline: none;
+    border-radius: 34px;
+}
+
+.sizeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
 }
