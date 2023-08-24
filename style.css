@@ -1,16 +1,18 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Cabin Sketch', sans-serif;
 }
 
 body {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 50px;
     background-color: #cacaca;
+    font-family: 'Cabin Sketch', sans-serif;
+    color: white;
 }
 
 .content {
@@ -44,25 +46,33 @@ body {
     border: 5px solid #000000;
     border-radius: 10px;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 10px;
-    background-color: #b9b9b9;
+    gap: 20px;
+    padding: 15px;
     font-size: 22px;
     background-color: #444444;
-    color: white;
+}
+
+/* updates flex direction of options if user screen too narrow */
+@media only screen and (min-width: 1110px) {
+    .optionsPanel {
+        flex-direction: column;
+    }
 }
 
 .header,
 .footer {
     background-color: #444444;
-    color: white;
     align-self: stretch;
     text-align: center;
     font-size: 20px;
     padding: 10px;
 }
 
+.footer {
+    margin-top: auto;
+}
+
+/* formatting of toggle switches */
 .switch {
     position: relative;
     display: inline-block;
@@ -128,4 +138,28 @@ input:checked + .slider:before {
     border-radius: 50%;
     left: 4px;
     bottom: 4px;
+}
+
+#clearButton {
+    background-color: #444444;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    font-size: 22px;
+    color: #ffffff;
+    font-family: 'Cabin Sketch', sans-serif;
+}
+
+#colorPicker {
+    appearance: none;
+    border: 2px solid #cccccc;
+    width: 80px;
+    height: 40px;
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+    border: none;
 }
